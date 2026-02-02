@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Study Assistant</title>
+  <link rel="stylesheet" href="popup.css">
+  <script src="libs/jspdf.min.js"></script>
+  <!-- Material Icons -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+</head>
+
+<body>
+  <div class="container">
+    <header>
+      <h2>🎓 Study Assistant</h2>
+      <!-- Offline Mode: No settings needed -->
+    </header>
+
+    <div class="glass-card">
+      <textarea id="inputText" placeholder="Paste your study text here..."></textarea>
+
+      <div class="controls" style="margin-top: 12px;">
+        <button id="summaryBtn">
+          <span class="material-icons-round" style="vertical-align: middle; font-size: 18px;">summarize</span> Summary
+        </button>
+        <button id="highlightBtn" class="secondary">
+          <span class="material-icons-round" style="vertical-align: middle; font-size: 18px;">highlight</span> Highlight
+        </button>
+
+        <select id="qaType">
+          <option value="">Question Type</option>
+          <option value="multiple choice">MCQ</option>
+          <option value="short answer">Short Answer</option>
+          <option value="essay">Essay</option>
+        </select>
+
+        <button id="qaBtn">
+          <span class="material-icons-round" style="vertical-align: middle; font-size: 18px;">quiz</span> Gen Q&A
+        </button>
+
+        <button id="pdfBtn" class="full-width secondary">
+          <span class="material-icons-round" style="vertical-align: middle; font-size: 18px;">picture_as_pdf</span>
+          Download PDF
+        </button>
+      </div>
+    </div>
+
+    <div id="resultContainer" class="glass-card" style="display: none;">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+        <h3 style="margin: 0; font-size: 1rem; color: var(--text-color);">Result</h3>
+        <button id="copyBtn" class="secondary" style="width: auto; padding: 4px 8px; font-size: 0.8rem;">Copy</button>
+      </div>
+      <div id="output"></div>
+    </div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "Student Study Assistant",
+  "description": "Summary, Highlights, Question Answers and PDF download for students.",
+  "version": "2.0",
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon.png",
+      "48": "icons/icon.png",
+      "128": "icons/icon.png"
+    }
+  },
+  "icons": {
+    "16": "icons/icon.png",
+    "48": "icons/icon.png",
+    "128": "icons/icon.png"
+  }
+}
